@@ -10,5 +10,5 @@
 脚本路径：https://raw.githubusercontent.com/winner800/QX/main/eruda.js
 */
 var body = $response.body;
-body = body.replace("</head>", `<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/eruda/2.4.1/eruda.min.js"></script><script>eruda.init();</script></head>`);
+body = body.replace("</head>", `<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/eruda/2.4.1/eruda.min.js"></script><script>eruda.init()</script></head>`);
 $done({body});
