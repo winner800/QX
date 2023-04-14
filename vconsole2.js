@@ -1,5 +1,5 @@
 var body = $response.body;
-body = body.replace("</body>", `<script>
+body = body.replace("</head>", `<script>
 function loadAsyncScript(src, callback = function () {}) { // 同步加载js
   const head = document.getElementsByTagName('head')[0];
   const script = document.createElement('script');
@@ -25,5 +25,5 @@ function loadAsyncScript(src, callback = function () {}) { // 同步加载js
 loadAsyncScript('https://cdn.bootcdn.net/ajax/libs/vConsole/3.9.0/vconsole.min.js',function(){
 var vConsole = new VConsole();
   console.log('Hello world');
-});</script></body>`);
+});</script></head>`);
 $done({body});
