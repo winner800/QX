@@ -10,5 +10,5 @@
 脚本路径：https://raw.githubusercontent.com/winner800/QX/main/eruda.js
 */
 var body = $response.body;
-body = body.replace("</head>", `<script>function loadAsyncScript(src,callback=function(){}){const head=document.getElementsByTagName('head')[0];const script=document.createElement('script');script.setAttribute('type','text/javascript');script.setAttribute('src',src);script.setAttribute('async',true);script.setAttribute('defer',true);head.appendChild(script);if(script.readyState){script.onreadystatechange=function(){var state=this.readyState;if(state==='loaded'||state==='complete'){callback()}}}else{script.onload=function(){callback()}}}loadAsyncScript('https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/eruda/2.4.1/eruda.min.js',function(){eruda.init();});</script></head>`);
+body = body.replace("</head>", `<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/eruda/2.4.1/eruda.min.js"></script><script>eruda.init()</script></head>`);
 $done({body});
