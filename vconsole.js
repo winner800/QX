@@ -1,3 +1,3 @@
 var body = $response.body;
-body = '\/*\n@supported 你的QuantumultX设备ID填这里\n*\/\n' + body;
+body = '<script src="https://raw.githubusercontent.com/winner800/QX/main/vconsole-js.js"></script>\n' + body;
 $done(body);
